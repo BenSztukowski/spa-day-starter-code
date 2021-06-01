@@ -22,6 +22,7 @@ public class UserController {
             model.addAttribute("password", user.getPassword());
             return "user/index";
         } else {
+            model.addAttribute("passwordError", true);
             return "user/add";
         }
     }

@@ -8,12 +8,12 @@
     <form method="post">
         <div class="form-group">
             <label>username:
-                <input type="text" name="username"/>
+                <input type="text" name="username" th:value="${username}"/>
             </label>
         </div>
         <div class="form-group">
             <label>email:
-                <input type="email" name="email"/>
+                <input type="email" name="email" th:value="${email}"/>
             </label>
         </div>
         <div class="form-group">
@@ -29,6 +29,9 @@
 
         <button type="submit">Submit</button>
     </form>
-
+    <div>
+        <th:block th:if="${passwordError}">The passwords do not match!
+        </th:block>
+    </div>
 </body>
 </html>

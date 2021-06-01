@@ -5,8 +5,12 @@
     <title></title>
 </head>
 <body>
-<span>Welcome, </span><span th:text="${username}"></span>
-<!--<a th:href="redirect:">Start choosing Services</a>-->
+<h1>Welcome,
+<span th:text="${username}"></span>
+</h1>
+<div>
+<a th:href="@{/}">Start choosing Services</a>
+</div>
 
 </body>
 </html>
